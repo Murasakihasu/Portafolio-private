@@ -1,0 +1,1069 @@
+
+:root{
+    --morado:#9e53af;
+    --gris:#d5d5d5;
+    --negro:#292929;
+    --blanco: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Teléfonos pequeños (por ejemplo, iPhone SE, dispositivos pequeños) */
+@media (max-width: 480px) {
+
+navbar{
+    width: 60px;
+    height: 60px;
+    background-color: var(--morado);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s linear;
+    z-index: 10;
+}
+
+.toggle{
+    font-size: 30px;
+    color: var(--gris);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+navbar.active{
+    width: 80%;
+    height: 80vh;
+    border-radius: 20px;
+    background-color: var(--negro);
+    background-position: right;
+}
+
+navbar ul{
+    display: none;
+}
+
+navbar.active ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+    margin-top: 50px;
+}
+
+navbar.active ul:last-child{
+    margin-bottom: 50px;
+}
+
+navbar.active li a{
+    background-color: var(--gris);
+    width: 100px;
+    height: 100px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--negro);
+}
+
+navbar.active li ion-icon{
+    color: var(--morado);
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4px;
+}
+
+navbar.active li p{
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.back1{
+    height: 100vh;
+    width: auto;
+    background: var(--gris);
+}
+
+.back1 header{
+    background-color: var(--morado);
+    height: 40px;
+}
+
+.back1 header p{
+    font-size: 30px;
+    margin-left: 20px;
+    letter-spacing: 5px;
+}
+
+.textBox{
+    width: 80%;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+.textBox h1{
+    font-size: 4rem;
+}
+
+.textBox .h1-2{
+    margin-left: 30px;
+}
+
+.textBox .h2{
+    margin-left: 80px;
+}
+
+.back1 .bar8{
+    background-color: var(--morado);
+    height: 10px;
+    position: absolute;
+    top: 290px;
+}
+
+.back1 img{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    height: 450px;
+    left: calc(50% - 126.5px);
+}
+
+.back1 .transition{
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(41,41,41,1) 0%, rgba(213,213,213,1) 100%);
+    position: absolute;
+    bottom: 0;
+}
+
+.back2{
+    height: 151vh;
+    width: auto;
+    background: var(--negro);
+}
+
+.back2 .tarjetaBox{
+    height: 100%;
+    width: 100%;;
+    display: grid;
+    gap: 6vh;
+    padding: 12vh 40px;
+    justify-content: center;
+}
+
+.back2 .tarjeta{
+    height: 30vh;
+    background: var(--gris);
+}
+
+.back2 .imageBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 6vh;
+}
+
+.back2 .imageBox img{
+    animation: girar 2s linear infinite;
+}
+
+.back2 .tarjeta h2{
+    width: 80%;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.back2 .bar8{
+    background-color: var(--morado);
+    height: 4px;
+}
+
+.back2 .tarjeta p{
+    padding: 20px;
+}
+
+.back3{
+    width: auto;
+    background: var(--gris);
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.back3 .transition{
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(41,41,41,1) 0%, rgba(213,213,213,1) 100%);
+    position: absolute;
+    top: 0;
+}
+
+.back3 header{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.back3 header .bar2{
+    background-color: var(--morado);
+    height: 10px;
+}
+
+.back3 header h1{
+    font-size: 40px;
+}
+
+.back3 .proyectBox{
+    position: relative;
+}
+
+.back3 .contentBox{
+    height: 80vh;
+    overflow: hidden;
+    padding: 40px;
+    transition: height 3s ease;
+}
+
+.back3 .contentBox.active{
+    height: 160vh;
+}
+
+.back3 .showMore .less {
+    display: none;
+}
+
+.back3 .showMore.active .more{
+    display: none;
+}
+
+.back3 .showMore.active .less{
+    display: block;
+}
+
+.back3 .showMore{
+    background-color: var(--morado);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: calc(50% - 25px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9;
+}
+
+.back3 .showMore ion-icon{
+    font-size: 30px;
+    color: var(--gris)
+}
+
+.back3 .proyectBox h2{
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.back3 .proyectBox p{
+    font-size: 18px;
+    margin-top: 10px
+}
+
+.back3 .imgBox{
+    margin-top: 40px;
+    display: grid;
+    gap: 10px
+}
+
+.back3 .imgBox .tarjeta{
+    border-radius: 40px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 99%
+}
+
+.back3 .imgBox .tarjeta .iconBox{
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 5px;
+    top: 5px;
+    background-color: var(--morado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back3 .imgBox .tarjeta .iconBox ion-icon{
+    color: var(--gris);
+    font-size: 20px;
+}
+
+.back3 .imgBox .tarjeta img{
+    width: calc(100vw - 100px);
+}
+
+.back3 .imgBox .tarjeta.active{
+    height: auto;
+    border-radius: 0;
+}
+
+.back3 .imgBox .tarjeta.active .iconBox{
+    display: none;
+}
+
+.back4{
+    width: auto;
+    background: var(--negro);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.back4 .transition{
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(41,41,41,1) 0%, rgba(213,213,213,1) 100%);
+    position: absolute;
+    top: 0;
+}
+
+.back4 header{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.back4 header .bar2{
+    background-color: var(--morado);
+    height: 10px;
+    width: 20%;
+    animation: expandirAncho20 2s ease forwards;
+}
+
+.back4 header h1{
+    font-size: 40px;
+    text-align: center;
+    color: var(--gris);
+}
+
+.back4 h2{
+    color: var(--gris);
+    margin-top: 40px;
+    margin-left: 20px;;
+    font-size: 30px;
+}
+
+.back4 .sliderBox{
+    padding: 40px;
+    width: calc((80% * 3) + 120px);
+}
+
+.back4 .sliderBox .slider{
+    display: flex;
+    gap: 20px;
+}
+
+.back4 .sliderBox .card{
+    width: 90%;
+    background-color: var(--gris);
+    border: solid var(--gris) 10px;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 4em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 4em;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.back4 .sliderBox .card .imgBox{
+    overflow: hidden;
+    height: 150px;
+    border-bottom: solid 5px var(--morado);
+}
+
+.back4 .sliderBox .card img{
+    width: calc(90vw - 70px)
+}
+
+.back4 .sliderBox .card .content{
+    padding: 20px;
+    width: 100%;
+    color: var(--negro);
+}
+
+.back4 .sliderBox .card .content h3{
+    font-size: 25px;
+    color: black;
+}
+
+.back4 .sliderBox .card .content p{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.back4 .content a{
+    padding: 10px;
+    width: calc(80% - 20px);
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--gris);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.back4 .content a ion-icon{
+    font-size: 18px;
+}
+
+
+.back4 .content a:hover {
+    background-color: var(--morado);
+    border: 2px solid var(--morado);
+    color: var(--gris);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back4 .sliderBox .stars{
+    margin-top: 40px;
+    position: relative;
+    width: 90vw;
+}
+
+.back4 .sliderBox .stars .star{
+    width: 50px;
+    transform:translateX(120vw);
+    transition: transform 1s ease;
+}
+
+.back4 .sliderBox .stars .star.visible{
+    position: absolute;
+    transform: translateX(calc((var(--position) * 50px)));
+}
+
+.pokeballBox{
+    width: auto;
+    height: 580px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.pokeballBox .slider{
+    position: absolute;
+    bottom: 450px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+
+}
+
+.pokeballBox .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transition: transform 4s linear;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(170px);
+}
+
+.pokeballBox .slider .item img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.pokeballBox .avatar{
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 180px);
+}
+
+.back4 .transition2{
+    height: 60px;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(41,41,41,1) 0%, rgba(213,213,213,1) 100%);
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+
+.back5{
+    width: auto;
+    background: var(--gris);
+    height: 115vh;
+    display: grid;
+    grid-template-rows: 2fr 4fr 2fr 2fr;
+    position: relative;
+    padding-top: 15vh;
+
+}
+
+.back5 .cardBox{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.back5 .cardBox .card{
+    background-color: var(--negro);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back5 .cardBox .card h1{
+    font-size: 30px;
+    color: var(--gris);
+    text-align: center;
+}
+
+.back5 .cardBox2{
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+
+.back5 .cardBox2 .card{
+    background-color: var(--negro);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.back5 .cardBox2 .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back5 .cardBox2 .card p{
+    color: var(--gris);
+    font-size: 20px;
+    margin: 10px;
+}
+
+.back5 .cardBox3 {
+    margin: 0 20px;
+    background-color: var(--negro);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.back5 .cardBox3 .card,
+.back5 .cardBox4 .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back5 .cardBox3 .card ion-icon,
+.back5 .cardBox4 .card ion-icon{
+    font-size: 40px;
+    color: var(--morado);
+    margin-right: 10px;
+}
+
+.back5 .cardBox3 .card h3,
+.back5 .cardBox4 .card h3{
+    font-size: 20px;
+    color: var(--gris);
+    font-weight: 700;
+}
+
+.back5 .cardBox3 .card p,
+.back5 .cardBox4 .card p{
+    font-size: 15px;
+    color: var(--gris);
+    font-weight: 500;
+}
+
+.back5 .cardBox4{
+    margin: 0 20px 20px 20px;
+    background: var(--gris);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.back5 .cardBox4 .box{
+    width: 100%;
+    height: auto;
+    background: var(--negro);
+    border-bottom-left-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 20px;
+    position: relative;
+}
+
+.back5 .cardBox4 .box::before{
+    content: "";
+    background-color: var(--negro);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right:-20px;
+    z-index: 2;
+}
+
+.back5 .cardBox4 .box2{
+    width: 100%;
+    height: auto;
+    background: var(--gris);
+    display: grid;
+    grid-template-columns: 1fr;
+    border-left: solid var(--gris) 10px;
+    border-top: solid var(--gris) 10px;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.back5 .cardBox4 .box2 .card{
+    width: 40px;
+    height: 40px;
+    background-color: var(--negro);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.back5 .cardBox4 .box2 .card img{
+    width: 40px;
+    height: 40px;
+}
+
+.back6{
+    background: var(--negro);
+    position: relative;
+    width: auto;
+}
+
+.back6 .transition{
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(41,41,41,1) 0%, rgba(213,213,213,1) 100%);
+    position: absolute;
+    top: 0;
+}
+
+.back6 header{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.back6 header .bar2{
+    background-color: var(--morado);
+    height: 10px;
+}
+
+.back6 header h1{
+    font-size: 40px;
+    text-align: center;
+    color: var(--gris);
+}
+
+.back6 .mainBox{
+    display: grid;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10vh;
+}
+
+.back6 .mainBox .cardBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10vh;
+}
+
+.back6 .mainBox .cardBox .imgBox{
+    background-color: var(--gris);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 10px var(--gris);
+    overflow: hidden;
+    position: relative;
+}
+
+.back6 .mainBox .cardBox .imgBox img{
+    width: 200%;
+    position: absolute;
+    right: -95px;
+
+}
+
+.back6 .mainBox .cardBox .centerBars{
+    height: 50px;
+    width: 200px;
+    top: 196px;
+    display: flex;
+    position: absolute;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr2{
+    background-color: var(--gris);
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    right: 85px;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr1{
+    background-color: var(--gris);
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    right: 115px;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr1::after{
+    content: "";
+    background-color: var(--negro);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-top-right-radius: 50%;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr1::before{
+    content: "";
+    background-color: var(--negro);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-bottom-right-radius: 50%;
+    bottom: 6px;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr3{
+    background-color: var(--gris);
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    right: 55px;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr3::after{
+    content: "";
+    background-color: var(--negro);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-top-left-radius: 50%;
+}
+
+.back6 .mainBox .cardBox .centerBars .barr3::before{
+    content: "";
+    background-color: var(--negro);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-bottom-left-radius: 50%;
+    bottom: 6px;
+}
+
+.back6 .mainBox .cardBox .card{
+    background-color: var(--gris);
+    padding: 20px;
+    border-radius: 2rem;
+    margin-top: 40px;
+}
+
+.back6 .mainBox .circleBox{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.back6 .mainBox .circleBox .circle{
+    width: 100px;
+    height: 100px;
+    background-color: var(--gris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.back6 .mainBox .circleBox .circle h2{
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: var(--morado);
+    padding: 10px;
+    border-radius: 50%;
+    top: -20px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back6 .mainBox .circleBox .circle h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: green;
+}
+
+.back6 .mainBox .circleBox .circle img{
+    width: 60px;
+    height: 60px;
+}
+
+.back7{
+    height: auto;
+    width: auto;
+    position: relative;
+    background-color: var(--gris);
+}
+
+.back7 .transition{
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(41,41,41,1) 0%, rgba(213,213,213,1) 100%);
+    position: absolute;
+    top: 0;
+}
+
+.back7 header{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.back7 header .bar2{
+    background-color: var(--morado);
+    height: 10px;
+
+}
+
+.back7 header h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.back7 img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.back7 .galeria1{
+    margin: 20px 20px 0 20px;
+    height: 230px;
+    width: auto;
+    overflow: hidden;
+}
+
+.back7 .galeria2{
+    margin: 20px 20px 0 20px;
+
+    width: auto;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.back7 .galeria3{
+    margin: 20px 20px 0 20px;
+    height: 250px;
+    width: auto;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.back7 .despedida{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back7 .despedida h1{
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    color: var(--negro);
+}
+
+
+
+
+.back8{
+    height: 100vh;
+    background: var(--negro);
+    width: auto;
+    position: relative;
+}
+
+.back8 .textBox{
+    position: absolute;
+    top: 10vh;
+}
+
+.back8 h1{
+    color: var(--gris);
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+}
+
+.back8 .ordenador{
+    width: 300px;
+    bottom: 200px;
+    position: absolute;
+    top: 50vh;
+    left: calc(50% - 150px);
+}
+
+.back8 .tuerca{
+    width: 140px;
+    position: absolute;
+    top: calc(50vh + 60px);
+    left: calc(50% - 70px);
+    animation: girar 4s linear infinite;
+}
+
+.footer{
+    height: 60px;
+    background-color: var(--morado);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer h1, .footer h2{
+    font-size: 20px;
+    color: var(--gris);
+}
+
+
+
+.crecer20{
+    animation: expandirAncho20 2s ease forwards;
+}
+
+.crecer80{
+    animation: expandirAncho80 2s ease forwards;
+}
+
+@keyframes autoRun {
+    from{
+        transform: rotateX(36deg) rotateY(0deg);
+    }to{
+        transform: rotateX(36deg) rotateY(360deg);
+    }
+}
+
+@keyframes expandirAncho80 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes expandirAncho20 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+}
+
+/* Teléfonos en general (smartphones en vertical) */
+@media (max-width: 600px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Tablets (pantallas de hasta 768px, incluyendo teléfonos grandes en horizontal) */
+@media (max-width: 768px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Pantallas de laptop pequeñas (por ejemplo, tablets en horizontal o laptops más pequeñas) */
+@media (max-width: 992px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Pantallas de laptop y desktop (tamaño estándar) */
+@media (max-width: 1200px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Pantallas grandes (desktops grandes o monitores anchos) */
+@media (max-width: 1600px) {
+    .cellBody{
+        display: none;
+    }
+}
