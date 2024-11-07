@@ -12,6 +12,45 @@
     box-sizing: border-box;
 }
 
+body{
+    background: var(--morado);
+}
+
+/* Teléfonos en general (smartphones en vertical) */
+@media (max-width: 600px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Tablets (pantallas de hasta 768px, incluyendo teléfonos grandes en horizontal) */
+@media (max-width: 768px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Pantallas de laptop pequeñas (por ejemplo, tablets en horizontal o laptops más pequeñas) */
+@media (max-width: 992px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Pantallas de laptop y desktop (tamaño estándar) */
+@media (max-width: 1200px) {
+    .cellBody{
+        display: none;
+    }
+}
+
+/* Pantallas grandes (desktops grandes o monitores anchos) */
+@media (max-width: 1600px) {
+    .cellBody{
+        display: none;
+    }
+}
+
 /* Teléfonos pequeños (por ejemplo, iPhone SE, dispositivos pequeños) */
 @media (max-width: 480px) {
 
@@ -1033,37 +1072,3 @@ navbar.active li p{
 }
 }
 
-/* Teléfonos en general (smartphones en vertical) */
-@media (max-width: 600px) {
-    .cellBody{
-        display: none;
-    }
-}
-
-/* Tablets (pantallas de hasta 768px, incluyendo teléfonos grandes en horizontal) */
-@media (max-width: 768px) {
-    .cellBody{
-        display: none;
-    }
-}
-
-/* Pantallas de laptop pequeñas (por ejemplo, tablets en horizontal o laptops más pequeñas) */
-@media (max-width: 992px) {
-    .cellBody{
-        display: none;
-    }
-}
-
-/* Pantallas de laptop y desktop (tamaño estándar) */
-@media (max-width: 1200px) {
-    .cellBody{
-        display: none;
-    }
-}
-
-/* Pantallas grandes (desktops grandes o monitores anchos) */
-@media (max-width: 1600px) {
-    .cellBody{
-        display: none;
-    }
-}
