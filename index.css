@@ -126,7 +126,7 @@ navbar.active li p{
 
 .back1 header{
     background-color: var(--morado);
-    height: 60px;
+    height: 10vh;
     display: flex;
     align-items: center;
 }
@@ -185,16 +185,14 @@ navbar.active li p{
 }
 
 .back2 .tarjetaBox{
-    height: 100%;
-    width: 100%;
     display: grid;
-    gap: 6vh;
+    gap: 30px;
     padding: 12vh 40px;
     justify-content: center;
 }
 
 .back2 .tarjeta{
-    height: 30vh;
+    height: 100%;
     background: var(--gris);
 }
 
@@ -202,7 +200,7 @@ navbar.active li p{
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 6vh;
+    height: 40px;
 }
 
 .back2 .imageBox img{
@@ -257,12 +255,12 @@ navbar.active li p{
 }
 
 .back3 .contentBox{
+    padding: 40px;
     height: 550px;
     overflow: hidden;
-    width: 80vw;
-    margin: auto;
     margin-top: 60px;
     transition: height 0.5s ease;
+    text-align: center;
 }
 
 .back3 .contentBox.active{
@@ -562,6 +560,7 @@ navbar.active li p{
 }
 
 .back5 .cardBox1{
+    margin-top: 40px;
     padding: 20px;
     width: 100%;
     display: grid;
