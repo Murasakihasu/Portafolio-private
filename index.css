@@ -168,7 +168,7 @@ navbar.active li p{
 .back1 img{
     z-index: 1;
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     height: 450px;
     left: calc(50% - 126.5px);
 }
@@ -180,14 +180,13 @@ navbar.active li p{
 }
 
 .back2{
-    height: 151vh;
     width: auto;
     background: var(--negro);
 }
 
 .back2 .tarjetaBox{
     height: 100%;
-    width: 100%;;
+    width: 100%;
     display: grid;
     gap: 6vh;
     padding: 12vh 40px;
@@ -258,14 +257,16 @@ navbar.active li p{
 }
 
 .back3 .contentBox{
-    height: 80vh;
+    height: 550px;
     overflow: hidden;
-    padding: 40px;
-    transition: height 3s ease;
+    width: 80vw;
+    margin: auto;
+    margin-top: 60px;
+    transition: height 0.5s ease;
 }
 
 .back3 .contentBox.active{
-    height: 160vh;
+    height: 1000px;
 }
 
 .back3 .showMore .less {
@@ -398,6 +399,7 @@ navbar.active li p{
 .back4 .sliderBox{
     padding: 40px;
     width: calc((80% * 3) + 120px);
+    overflow: hidden;
 }
 
 .back4 .sliderBox .slider{
