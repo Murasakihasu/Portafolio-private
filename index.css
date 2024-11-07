@@ -12,10 +12,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background: var(--morado);
-}
-
 /* Tablets (pantallas de hasta 768px, incluyendo teléfonos grandes en horizontal)
 @media (max-width: 768px) {
     .cellBody{
@@ -130,11 +126,13 @@ navbar.active li p{
 
 .back1 header{
     background-color: var(--morado);
-    height: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .back1 header p{
-    font-size: 30px;
+    font-size: 2rem;
     margin-left: 20px;
     letter-spacing: 5px;
 }
@@ -149,7 +147,7 @@ navbar.active li p{
 }
 
 .textBox h1{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .textBox .h1-2{
@@ -551,7 +549,7 @@ navbar.active li p{
     background: var(--gris);
     height: 115vh;
     display: grid;
-    grid-template-rows: 2fr 4fr 2fr 2fr;
+    grid-template-rows: 1fr 4fr 2fr 2fr;
     position: relative;
     padding-top: 15vh;
 
