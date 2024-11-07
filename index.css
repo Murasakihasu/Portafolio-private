@@ -405,6 +405,7 @@ navbar.active li p{
 .back4 .sliderBox .slider{
     display: flex;
     gap: 20px;
+    overflow: hidden;
 }
 
 .back4 .sliderBox .card{
@@ -426,7 +427,8 @@ navbar.active li p{
 }
 
 .back4 .sliderBox .card img{
-    width: calc(90vw - 70px)
+    width: calc(90vw - 70px);
+    overflow: hidden;
 }
 
 .back4 .sliderBox .card .content{
@@ -561,6 +563,7 @@ navbar.active li p{
 
 .back5 .cardBox1{
     padding: 20px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
