@@ -23,14 +23,14 @@ body{
     }
 }
 
-/* Pantallas de laptop pequeñas (por ejemplo, tablets en horizontal o laptops más pequeñas) */
+Pantallas de laptop pequeñas (por ejemplo, tablets en horizontal o laptops más pequeñas) 
 @media (max-width: 992px) {
     .cellBody{
         display: none;
     }
 }
 
-/* Pantallas de laptop y desktop (tamaño estándar) */
+/* Pantallas de laptop y desktop (tamaño estándar)
 @media (max-width: 1200px) {
     .cellBody{
         display: none;
