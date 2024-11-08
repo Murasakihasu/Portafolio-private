@@ -568,7 +568,6 @@ navbar.active li p{
 .back5 .cardBox1{
     margin-top: 40px;
     padding: 20px;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -582,6 +581,11 @@ navbar.active li p{
     justify-content: center;
     align-items: center;
     height: 100px;
+}
+
+.back5 .cardBox1 .card img{
+    height: 100px;
+    width: 100px;
 }
 
 .back5 .cardBox1 .card h1{
