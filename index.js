@@ -42,7 +42,7 @@ showMoreButtons.forEach((button) => {
 
 
 document.querySelectorAll(".sliderBox").forEach((sliderBox) => {
-  const slides = sliderBox.querySelectorAll(".slider .card");
+  const slides = sliderBox.querySelectorAll(".card");
   const stars = sliderBox.querySelectorAll(".stars .star");
   let currentIndex = 0;
 

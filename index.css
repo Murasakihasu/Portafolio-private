@@ -357,7 +357,7 @@ navbar.active li p{
 }
 
 .back4{
-    width: auto;
+    width: 100%;
     background: var(--negro);
     position: relative;
     overflow: hidden;
@@ -369,7 +369,7 @@ navbar.active li p{
 }
 
 .back4 header{
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -395,20 +395,24 @@ navbar.active li p{
     font-size: 30px;
 }
 
-.back4 .sliderBox{
-    padding: 40px;
-    width: calc((80% * 3) + 120px);
-    overflow: hidden;
-}
-
-.back4 .sliderBox .slider{
+.back4 .sliderBox {
     display: flex;
     gap: 20px;
-    overflow: hidden;
+    width: 100%;
+    padding: 40px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
 }
 
+.back4 .sliderBox::-webkit-scrollbar {
+    display: none;
+}
+
+
 .back4 .sliderBox .card{
-    width: 90%;
+    flex: 0 0 75vw;
+    scroll-snap-align: center;
     background-color: var(--gris);
     border: solid var(--gris) 10px;
     border-top-left-radius: 2em;
@@ -473,19 +477,20 @@ navbar.active li p{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.back4 .sliderBox .stars{
+.back4 .stars{
     margin-top: 40px;
     position: relative;
-    width: 90vw;
+    width: 120vw;
+    overflow: hidden;
 }
 
-.back4 .sliderBox .stars .star{
+.back4 .stars .star{
     width: 50px;
-    transform:translateX(120vw);
+    transform: translateX(120vw);
     transition: transform 1s ease;
 }
 
-.back4 .sliderBox .stars .star.visible{
+.back4 .stars .star.visible{
     position: absolute;
     transform: translateX(calc((var(--position) * 50px)));
 }
@@ -966,6 +971,7 @@ navbar.active li p{
 .back8 .textBox{
     position: absolute;
     top: 10vh;
+    height: 40vh;
 }
 
 .back8 h1{
@@ -976,18 +982,18 @@ navbar.active li p{
 }
 
 .back8 .ordenador{
-    width: 300px;
-    bottom: 200px;
+    height: 30vh;
+    width: 30vh;
     position: absolute;
-    top: 50vh;
-    left: calc(50% - 150px);
+    top: 60vh;
+    left: calc(50% - 15vh);
 }
 
 .back8 .tuerca{
-    width: 140px;
+    width: 15vh;
     position: absolute;
-    top: calc(50vh + 60px);
-    left: calc(50% - 70px);
+    top: calc(60vh + 5vh);
+    left: calc(50% - 7.5vh);
     animation: girar 4s linear infinite;
 }
 
