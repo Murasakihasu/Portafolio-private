@@ -122,11 +122,12 @@ navbar.active li p{
     height: 100vh;
     width: auto;
     background: var(--gris);
+    position: relative;
 }
 
 .back1 header{
     background-color: var(--morado);
-    height: 10vh;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -928,31 +929,14 @@ navbar.active li p{
     object-fit: contain;
 }
 
-.back7 .galeria1{
-    margin: 20px 20px 0 20px;
-    height: 230px;
-    width: auto;
-    overflow: hidden;
-}
-
 .back7 .galeria2{
     margin: 20px 20px 0 20px;
-
     width: auto;
     display: flex;
     gap: 20px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.back7 .galeria3{
-    margin: 20px 20px 0 20px;
-    height: 250px;
-    width: auto;
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
 }
 
 .back7 .despedida{
