@@ -181,12 +181,12 @@ navbar.active li p{
     background-color: var(--morado);
     height: 10px;
     position: absolute;
-    top: 240px;
+    top: 200px;
 }
 
 .back1 .transition1{
     position: absolute;
-    bottom: -5px;
+    bottom: 40px;
     z-index: 3;
 } 
 
@@ -201,10 +201,11 @@ navbar.active li p{
     bottom: -5px;
     z-index: 1;
     overflow: hidden;
+    height: 40vh;
 }
 
 .back1 img{
-    width: 100%;
+    height: 100%;
 }
 
 .back1 .transition3{
