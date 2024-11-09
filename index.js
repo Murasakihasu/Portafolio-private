@@ -16,96 +16,42 @@ iconBoxes.forEach(iconBox => {
 
 
 const toggleButton = document.getElementById("toggle");
-  const navbar = document.getElementById("navbar");
+const navbar = document.getElementById("navbar");
+const menuItems = navbar.querySelectorAll("a"); // Selecciona las etiquetas dentro del menú (por ejemplo, enlaces)
 
-  toggleButton.addEventListener("click", () => {
-    // Alterna la clase 'active' en el navbar al hacer clic en el toggle
-    navbar.classList.toggle("active");
-  });
+// Función para cerrar el menú
+function closeMenu() {
+  navbar.classList.remove("active");
+}
 
+// Alterna la clase 'active' en el navbar al hacer clic en el toggle
+toggleButton.addEventListener("click", (event) => {
+  navbar.classList.toggle("active");
+  event.stopPropagation(); // Evita que el evento se propague y cierre el menú inmediatamente
+});
 
-// Selecciona todos los elementos con la clase 'showMore'
+// Cierra el menú al hacer clic en cualquier etiqueta dentro del menú
+menuItems.forEach((item) => {
+  item.addEventListener("click", closeMenu);
+});
+
+// Cierra el menú al hacer clic fuera del menú
+document.addEventListener("click", (event) => {
+  if (!navbar.contains(event.target) && !toggleButton.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+// Código para manejar el botón "showMore"
 const showMoreButtons = document.querySelectorAll(".showMore");
 
 showMoreButtons.forEach((button) => {
-  // Para cada botón, selecciona su respectivo contentBox
   const content = button.closest(".proyectBox").querySelector(".contentBox");
 
-  // Agrega el evento click a cada botón individualmente
   button.addEventListener("click", () => {
-    // Alterna la clase 'active' en content y en el botón
     content.classList.toggle("active");
     button.classList.toggle("active");
   });
-});
-
-
-
-document.querySelectorAll(".sliderBox").forEach((sliderBox) => {
-  const slides = sliderBox.querySelectorAll(".card");
-  const stars = sliderBox.querySelectorAll(".stars .star");
-  let currentIndex = 0;
-
-  function updateSlider() {
-      // Desplaza las tarjetas dentro del slider correspondiente
-      slides.forEach((slide, index) => {
-          slide.style.transform = `translateX(-${currentIndex * 100}%)`;
-      });
-
-      // Actualiza la visibilidad de las estrellas
-      stars.forEach((star, index) => {
-          if (index <= currentIndex) {
-              star.classList.add("visible");
-          } else {
-              star.classList.remove("visible");
-          }
-      });
-  }
-
-  function goToNextSlide() {
-      if (currentIndex < slides.length - 1) {
-          currentIndex++;
-          updateSlider();
-      }
-  }
-
-  function goToPreviousSlide() {
-      if (currentIndex > 0) {
-          currentIndex--;
-          updateSlider();
-      }
-  }
-
-  // Configura los eventos de deslizamiento para dispositivos móviles y de escritorio
-  let startX = 0;
-  let isDragging = false;
-
-  function startDrag(e) {
-      startX = e.touches ? e.touches[0].clientX : e.clientX;
-      isDragging = true;
-  }
-
-  function endDrag(e) {
-      if (!isDragging) return;
-      const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
-      const diffX = startX - endX;
-
-      if (diffX > 50) goToNextSlide();
-      else if (diffX < -50) goToPreviousSlide();
-
-      isDragging = false;
-  }
-
-  // Eventos específicos para cada sliderBox
-  const slider = sliderBox.querySelector(".slider");
-  slider.addEventListener("touchstart", startDrag);
-  slider.addEventListener("touchend", endDrag);
-  slider.addEventListener("mousedown", startDrag);
-  slider.addEventListener("mouseup", endDrag);
-  slider.addEventListener("mouseleave", () => (isDragging = false));
-
-  // Inicializa el primer estado del slider
-  updateSlider();
 });
 
 
