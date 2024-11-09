@@ -181,7 +181,7 @@ navbar.active li p{
     background-color: var(--morado);
     height: 10px;
     position: absolute;
-    top: 200px;
+    top: 220px;
 }
 
 .back1 .transition1{
@@ -202,6 +202,7 @@ navbar.active li p{
     z-index: 1;
     overflow: hidden;
     height: 40vh;
+    width: 100vw;
 }
 
 .back1 img{
@@ -250,15 +251,15 @@ navbar.active li p{
 
 .back3 .contentBox{
     padding: 40px;
-    height: 550px;
+    max-height: 550px;
     overflow: hidden;
     margin-top: 60px;
-    transition: height 0.5s ease;
+    transition: max-height 0.5s ease;
     text-align: center;
 }
 
 .back3 .contentBox.active{
-    height: 1000px;
+    max-height: 1500px;
 }
 
 .back3 .showMore .less {
