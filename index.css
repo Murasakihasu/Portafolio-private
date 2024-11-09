@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --morado:#9e53af;
     --gris:#d5d5d5;
     --negro:#292929;
     --blanco: #fff;
+    --font1: "Anton SC", sans-serif;
+    --font2:"Oswald", sans-serif;
+    --font3: "Sour Gummy", sans-serif;
+    --font4: "Josefin Sans", sans-serif;
 }
 
 *{
@@ -116,6 +121,7 @@ navbar.active li p{
     font-size: 0.8rem;
     font-weight: 700;
     text-align: center;
+    font-family: var(--font2);
 }
 
 .back1{
@@ -136,91 +142,75 @@ navbar.active li p{
     font-size: 2rem;
     margin-left: 20px;
     letter-spacing: 5px;
+    font-family: var(--font2);
 }
 
 .textBox{
-    width: 80%;
-    margin: auto;
+    width: 100%;
     z-index: 2;
-    position: absolute;
-    top: 80px;
-    left: 50px;
+    position: relative;
+    height: calc(60vh - 60px);
 }
 
 .textBox h1{
+    position: absolute;
+    top: 20px;
+    left: 50px;
     font-size: 3rem;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .textBox .h1-2{
-    margin-left: 30px;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .textBox .h2{
-    margin-left: 80px;
+    position: absolute;
+    top: 150px;
+    left: 110px;
+    font-family: var(--font4);
+    font-weight: 400;
 }
 
 .back1 .bar8{
     background-color: var(--morado);
     height: 10px;
     position: absolute;
-    top: 290px;
+    top: 240px;
 }
 
-.back1 img{
-    z-index: 1;
-    position: absolute;
-    bottom: -5px;
-    height: 450px;
-    left: calc(50% - 126.5px);
-}
-
-.back1 .transition{
+.back1 .transition1{
     position: absolute;
     bottom: -5px;
     z-index: 3;
+} 
+
+.back1 .transition2{
+    position: absolute;
+    top: -5px;
+    z-index: 3;
+} 
+
+.back1 .imgBox{
+    position: absolute;
+    bottom: -5px;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.back2{
-    width: auto;
-    background: var(--negro);
-}
-
-.back2 .tarjetaBox{
-    display: grid;
-    gap: 30px;
-    padding: 12vh 40px;
-    justify-content: center;
-}
-
-.back2 .tarjeta{
-    height: 100%;
-    background: var(--gris);
-}
-
-.back2 .imageBox{
+.back1 img{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 40px;
 }
 
-.back2 .imageBox img{
-    animation: girar 2s linear infinite;
-}
-
-.back2 .tarjeta h2{
-    width: 80%;
-    padding: 20px;
-    font-weight: 700;
-}
-
-.back2 .bar8{
-    background-color: var(--morado);
-    height: 4px;
-}
-
-.back2 .tarjeta p{
-    padding: 20px;
+.back1 .transition3{
+    position: absolute;
+    bottom: -5px;
+    z-index: 3;
 }
 
 .back3{
@@ -249,6 +239,8 @@ navbar.active li p{
 
 .back3 header h1{
     font-size: 40px;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back3 .proyectBox{
@@ -303,11 +295,13 @@ navbar.active li p{
 .back3 .proyectBox h2{
     font-size: 28px;
     margin-top: 10px;
+    font-family: var(--font4);
 }
 
 .back3 .proyectBox p{
     font-size: 18px;
-    margin-top: 10px
+    margin-top: 10px;
+    font-family: var(--font3);
 }
 
 .back3 .imgBox{
@@ -386,13 +380,16 @@ navbar.active li p{
     font-size: 40px;
     text-align: center;
     color: var(--gris);
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back4 h2{
     color: var(--gris);
     margin-top: 40px;
     margin-left: 20px;;
-    font-size: 30px;
+    font-size: 1.8rem;
+    font-family: var(--font4);
 }
 
 .back4 .sliderBox {
@@ -443,11 +440,13 @@ navbar.active li p{
 .back4 .sliderBox .card .content h3{
     font-size: 25px;
     color: black;
+    font-family: var(--font2);
 }
 
 .back4 .sliderBox .card .content p{
     margin-top: 10px;
     text-align: justify;
+    font-family: var(--font3);
 }
 
 .back4 .content a{
@@ -462,6 +461,7 @@ navbar.active li p{
     align-content: center;
     font-size: 15px;
     text-decoration: none;
+    font-family: var(--font2);
 }
 
 .back4 .content a ion-icon{
@@ -544,6 +544,8 @@ navbar.active li p{
 
 .back5 header h1{
     font-size: 40px;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back5 .cardBox1{
@@ -573,6 +575,7 @@ navbar.active li p{
     font-size: 20px;
     color: var(--gris);
     text-align: center;
+    font-family: var(--font3);
 }
 
 .back5 .cardBox2{
@@ -602,6 +605,8 @@ navbar.active li p{
 .back5 .cardBox2 .card p{
     color: var(--gris);
     font-size: 30px;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back5 .cardBox3 {
@@ -634,6 +639,7 @@ navbar.active li p{
     font-size: 15px;
     color: var(--gris);
     font-weight: 700;
+    font-family: var(--font4);
 }
 
 .back5 .cardBox3 .card p,
@@ -641,6 +647,7 @@ navbar.active li p{
     font-size: 12px;
     color: var(--gris);
     font-weight: 500;
+    font-family: var(--font3);
 }
 
 .back5 .cardBox4{
@@ -724,6 +731,8 @@ navbar.active li p{
     font-size: 40px;
     text-align: center;
     color: var(--gris);
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back6 .mainBox{
@@ -837,6 +846,14 @@ navbar.active li p{
     margin-top: 40px;
 }
 
+.back6 .mainBox .cardBox .card h2{
+    font-family: var(--font4);
+}
+
+.back6 .mainBox .cardBox .card p{
+    font-family: var(--font3);
+}
+
 .back6 .mainBox .circleBox{
     margin-top: 5vh;
     display: flex;
@@ -867,12 +884,15 @@ navbar.active li p{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--font1);
+    font-weight: 100;
 }
 
 .back6 .mainBox .circleBox .circle h3{
     font-size: 25px;
     font-weight: 700;
     color: green;
+    font-family: var(--font3);
 }
 
 .back6 .mainBox .circleBox .circle img{
@@ -908,6 +928,8 @@ navbar.active li p{
 .back7 header h1{
     font-size: 40px;
     text-align: center;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back7 img{
@@ -940,10 +962,8 @@ navbar.active li p{
     text-align: center;
     margin: auto;
     color: var(--negro);
+    font-family: var(--font3);
 }
-
-
-
 
 .back8{
     height: 100vh;
@@ -965,6 +985,8 @@ navbar.active li p{
     color: var(--gris);
     text-align: center;
     font-size: 40px;
+    font-family: var(--font1);
+    font-weight: 400;
 }
 
 .back8 .ordenador{
@@ -994,6 +1016,7 @@ navbar.active li p{
 .footer h1, .footer h2{
     font-size: 20px;
     color: var(--gris);
+    font-family: var(--font2);
 }
 
 
