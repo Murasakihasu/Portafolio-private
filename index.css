@@ -17,6 +17,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* Tablets (pantallas de hasta 768px, incluyendo teléfonos grandes en horizontal)
 @media (max-width: 768px) {
     .cellBody{
@@ -46,7 +48,11 @@ Pantallas de laptop pequeñas (por ejemplo, tablets en horizontal o laptops más
 }*/
 
 /* Teléfonos pequeños (por ejemplo, iPhone SE, dispositivos pequeños) */
-@media (max-width: 600px) {
+@media (min-width: 320px) {
+
+    .pcBody{
+        display: none;
+    }
 
 navbar{
     width: 60px;
@@ -462,7 +468,7 @@ navbar.active li p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     font-size: 15px;
     text-decoration: none;
     color: black;
@@ -703,10 +709,6 @@ navbar.active li p{
     width: 100%;
     height: 85px;
     overflow: hidden;
-}
-
-.back5 .cardBox4 .box2 .card img{
-    height: 120px;
 }
 
 .back6{
@@ -1037,7 +1039,459 @@ navbar.active li p{
     margin-left: 20px;
 }
 
+.mid{
+    display: none;
+}
 
+}
+
+@media (min-width: 768px) {
+
+    navbar{
+        width: 80px;
+        height: 80px;
+        top: 20px;
+        right: 20px;
+    }
+
+    navbar .toggle{
+        font-size: 40px;
+        top: 20px;
+        left: 20px;
+    }
+
+    navbar.active{
+        width: 40%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        border-radius: 20px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+    }
+
+    navbar.active h1{
+        display: block;
+        color: var(--gris);
+        font-size: 2rem;
+        border-left: 7px solid var(--morado);
+        border-right: 7px solid var(--morado);
+        padding: 0 20px;
+        font-family: var(--font1);
+        font-weight: 400;
+    }
+
+    .back1 header p{
+        font-size: 2.5rem;
+    }
+    
+    .textBox{
+        height: calc(50vh - 60px);
+    }
+    
+    .textBox h1{
+        position: absolute;
+        top: 40px;
+        left: 100px;
+        font-size: 4rem;
+    }
+    
+    .textBox .h1-2{
+        top: 120px;
+        left: 180px;
+    }
+    
+    .textBox .h2{
+        top: 230px;
+        left: 300px;
+        font-size: 2rem;
+    }
+    
+    .back1 .bar8{
+        height: 15px;
+        top: 300px;
+    }
+
+    .back1 .transition1{
+        position: absolute;
+        bottom: -40px;
+        z-index: 3;
+    } 
+
+    .back1 .transition2{
+        position: absolute;
+        top: -20px;
+        z-index: 3;
+    } 
+
+    .back1 .transition3{
+        position: absolute;
+        bottom: -50px;
+        z-index: 3;
+    }
+    
+    .back1 .imgBox{
+        position: relative;
+        z-index: 1;
+        background: var(--negro);
+        height: 50vh;
+        width: 100vw;
+        padding: 40px 0;
+    }
+    
+    .back1 img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .back3 header{
+        padding-top: 180px; 
+    }
+    
+    .back3 header .bar2{
+        height: 15px;
+    }
+    
+    .back3 header h1{
+        font-size: 3rem;
+    }
+    
+    .back3 .contentBox{
+        padding: 40px;
+    }
+    
+    .back4 header{
+        padding-top: 180px; 
+    }
+    
+    .back4 header .bar2{
+        height: 15px;
+    }
+    
+    .back4 header h1{
+        font-size: 3rem;
+    }
+    
+    .back4 h2{
+        margin-top: 60px;
+        margin-left: 40px;
+        font-size: 2.5rem;
+    }
+    
+    .back4 .sliderBox {
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .back4 .sliderBox .card{
+        flex: 0 0 50vw;
+    }
+    
+    .back4 .sliderBox .card .imgBox{
+        height: 200px;
+        border-bottom: solid 10px var(--morado);
+    }
+    
+    .back4 .sliderBox .card img{
+        width: 50vw;
+    }
+    
+    .back4 .sliderBox .card .content{
+        padding: 30px;
+    }
+    
+    .back4 .sliderBox .card .content h3{
+        font-size: 1.8rem;
+    }
+    
+    .back4 .sliderBox .card .content p{
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    
+    .back4 .content a{
+        padding: 15px;
+        width: calc(80% - 30px);
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
+    .back4 .content a ion-icon{
+        font-size: 23px;
+    }
+    
+    .pokeballBox{
+        height: 750px;
+    }
+    
+    .pokeballBox .slider{
+        position: absolute;
+        bottom: 500px;
+    }
+    
+    .pokeballBox .slider .item{
+        transition: transform 2s linear;
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    
+    .pokeballBox .slider .item img{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .pokeballBox .avatar{
+        height: 570px;
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 190px);
+    }
+    
+    .back5{
+        padding-bottom: 5vh;
+    }
+    
+    .back5 header .bar2{
+        height: 15px;
+    }
+    
+    .back5 header h1{
+        font-size: 3rem;
+    }
+    
+    .back5 .cardBox1{
+        padding: 40px 40px 20px 40px;
+        gap: 20px;
+        height: 190px;
+    }
+    
+    .back5 .cardBox1 .card{
+        height: 130px;
+    }
+    
+    .back5 .cardBox1 .card img{
+        height: 240px;
+        width: 240px;
+    }
+    
+    .back5 .cardBox1 .card h1{
+        font-size: 2rem;
+    }
+    
+    .back5 .cardBox2{
+        padding: 0px 40px;
+        gap: 20px;
+        height: 400px;
+    }
+    
+    .back5 .cardBox2 .card p{
+        font-size: 2rem;
+    }
+    
+    .back5 .cardBox3 {
+        margin: 20px 40px 0 40px;
+        height: 130px;
+    }
+    
+    .back5 .cardBox3 .card ion-icon,
+    .back5 .cardBox4 .card ion-icon{
+        font-size: 60px;
+        margin-right: 15px;
+    }
+    
+    .back5 .cardBox3 .card a,
+    .back5 .cardBox4 .card a{
+        font-size: 1.5rem;
+    }
+    
+    .back5 .cardBox3 .card p,
+    .back5 .cardBox4 .card p{
+        font-size: 1rem;
+    }
+    
+    .back5 .cardBox4{
+        margin: 0 40px 0 40px;
+        height: 135px;
+    }
+    
+    .back5 .cardBox4 .box2 .card{
+        height: 110px;
+    }
+
+    .back6 header{
+        padding-top: 250px;
+    }
+    
+    .back6 header .bar2{
+        height: 15px;
+    }
+    
+    .back6 header h1{
+        font-size: 3rem;
+    }
+    
+    .back6 .mainBox{
+        width: 80%;
+        padding-bottom: 5vh;
+    }
+    
+    .back6 .mainBox .cardBox .imgBox{
+        background-color: var(--gris);
+        width: 300px;
+        height: 300px;
+        border: solid 15px var(--gris);
+    }
+    
+    .back6 .mainBox .cardBox .centerBars{
+        height: 70px;
+        width: 200px;
+        top: 297px;
+    }
+
+    .back6 .mainBox .cardBox .centerBars .barr2{
+        width: 40px;
+        right: 80px;
+    }
+    
+    .back6 .mainBox .cardBox .centerBars .barr1{
+        width: 40px;
+        position: absolute;
+        right: 120px;
+    }
+    
+    .back6 .mainBox .cardBox .centerBars .barr1::after{
+        height: 36px;
+        width: 40px;
+    }
+    
+    .back6 .mainBox .cardBox .centerBars .barr1::before{
+        height: 36px;
+        width: 40px;
+        position: absolute;
+    }
+    
+    .back6 .mainBox .cardBox .centerBars .barr3{
+        width: 40px;
+        right: 50px;
+    }
+    
+    .back6 .mainBox .cardBox .centerBars .barr3::after{
+        height: 36px;
+        width: 40px;
+    }
+    
+    .back6 .mainBox .cardBox .centerBars .barr3::before{
+        height: 36px;
+        width: 40px;
+        bottom: 6px;
+    }
+    
+    .back6 .mainBox .cardBox .card{
+        padding: 30px;
+        margin-top: 61px;
+    }
+    
+    .back6 .mainBox .cardBox .card h2{
+        font-size: 1.8rem;
+    }
+    
+    .back6 .mainBox .cardBox .card p{
+        font-size: 1.2rem;
+    }
+    
+    .back6 .mainBox .circleBox .circle{
+        width: 160px;
+        height: 160px;
+    }
+    
+    .back6 .mainBox .circleBox .circle h2{
+        font-size: 20px;
+        padding: 10px;
+        top: -40px;
+        height: 80px;
+        width: 80px;
+    }
+    
+    .back6 .mainBox .circleBox .circle h3{
+        font-size: 2.5rem;
+    }
+    
+    .back6 .mainBox .circleBox .circle img{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .back7 header{
+        padding-top: 200px;
+    }
+    
+    .back7 header .bar2{
+        height: 15px;
+    }
+    
+    .back7 header h1{
+        font-size: 3rem;
+    }
+    
+    .back7 .fotografia{
+        font-size: 2rem;
+    }
+    
+    .back7 .despedida h1{
+        font-size: 3rem;
+    }
+    
+    
+    .back8 h1{
+        font-size: 3rem;
+    }
+    
+    .back8 .ordenador{
+        height: 400px;
+        width: 400px;
+        bottom: 100px;
+        left: calc(50% - 200px);
+    }
+    
+    .back8 .tuerca{
+        width: 200px;
+        height: 200px;
+        bottom: 230px;
+        left: calc(50% - 100px);
+    }
+    
+    .footer{
+        height: 80px;
+    }
+    
+    .footer h2{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cellBody{
+        display: none;
+    }
+
+    .pcBody{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--negro);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .pcBody h1{
+        font-family: var(--font1);
+        color: var(--gris);
+        font-size: 4rem;
+        text-align: center;
+    }
+}
 
 .crecer20{
     animation: expandirAncho20 2s ease forwards;
@@ -1081,5 +1535,3 @@ navbar.active li p{
         transform: rotate(360deg);
     }
 }
-}
-

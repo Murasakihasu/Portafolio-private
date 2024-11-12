@@ -2,13 +2,20 @@ const iconBoxes = document.querySelectorAll('.iconBox');
 
 iconBoxes.forEach(iconBox => {
   iconBox.addEventListener('click', () => {
-    document.querySelectorAll('.tarjeta.active').forEach(activeTarjeta => {
-      activeTarjeta.classList.remove('active');
+    // Encuentra el imgBox padre que contiene las tarjetas
+    const imgBox = iconBox.closest('.imgBox');
+    
+    // Remueve la clase 'active' de todas las tarjetas dentro de este imgBox
+    imgBox.querySelectorAll('.tarjeta').forEach(tarjeta => {
+      tarjeta.classList.remove('active');
     });
+
+    // Agrega la clase 'active' a la tarjeta en la que se hizo clic
     const tarjeta = iconBox.closest('.tarjeta');
     tarjeta.classList.add('active');
   });
 });
+
 
 
 const toggleButton = document.getElementById("toggle");
