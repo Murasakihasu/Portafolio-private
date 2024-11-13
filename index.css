@@ -79,21 +79,23 @@ navbar{
     right: 15px;
 }
 
-navbar h1{
+navbar .menu h1{
     display: none;
 }
 
 navbar.active{
     padding: 20px;
-    padding-top: 0;
     width: 90%;
-    height: 90%;
+    height: 90vh;
+    max-height: 200vh;
     border-radius: 20px;
     background-color: var(--negro);
-    background-position: right;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 }
 
-navbar.active h1{
+navbar.active .menu h1{
     display: block;
     color: var(--gris);
     font-size: 2rem;
@@ -103,6 +105,8 @@ navbar.active h1{
     font-family: var(--font1);
     font-weight: 400;
     margin-bottom: 20px;
+    margin-top: 20px;
+    height: 60px;
 }
 
 navbar ul{
@@ -117,10 +121,10 @@ navbar.active ul{
 }
 
 navbar.active li a{
-    background-color: var(--gris);
     width: 100px;
     height: 100px;
-    border-radius: 40px;
+    background-color: var(--gris);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1072,16 +1076,27 @@ navbar.active li p{
     navbar .toggle{
         font-size: 40px;
         top: 20px;
-        left: 20px;
+        right: 20px;
     }
 
     navbar.active{
-        top: 0;
-        right: 0;
         border-radius: 20px;
         z-index: 10;
-        display: flex;
-        flex-direction: column;
+    }
+
+    navbar.active li a{
+        width: 200px;
+        height: 130px;
+    }
+    
+    navbar.active li ion-icon{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 6px;
+    }
+    
+    navbar.active li p{
+        font-size: 1.2rem;
     }
 
     .back1{
