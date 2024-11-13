@@ -149,7 +149,7 @@ navbar.active li p{
 }
 
 .back1{
-    height: 760px;
+    height: max-content;
     width: 100vw;
     background: var(--gris);
     position: relative;
@@ -222,16 +222,18 @@ navbar.active li p{
 } 
 
 .back1 .imgBox{
-    position: absolute;
-    bottom: -5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     overflow: hidden;
-    height: 350px;
+    height: max-content;
     width: 100vw;
 }
 
 .back1 img{
-    height: 100%;
+    width: 100%;
 }
 
 .back1 .transition3{
@@ -1007,9 +1009,8 @@ navbar.active li p{
 }
 
 .back8{
-    height: calc(100vh - 60px);
+    height: 700px;
     background: var(--negro);
-
     position: relative;
     overflow: hidden;
 }
