@@ -1082,12 +1082,16 @@ navbar.active li p{
         font-weight: 400;
     }
 
+    .back1{
+        height: auto;
+    }
+
     .back1 header p{
         font-size: 2.5rem;
     }
     
     .textBox{
-        height: calc(50vh - 60px);
+        height: 450px;
     }
     
     .textBox h1{
@@ -1135,7 +1139,7 @@ navbar.active li p{
         position: relative;
         z-index: 1;
         background: var(--negro);
-        height: 50vh;
+        height: 450px;
         width: 100vw;
         padding: 40px 0;
     }
